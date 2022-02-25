@@ -4,9 +4,10 @@ Section: science
 Priority: optional
 Build-Depends: debhelper (>= 11),
                cmake,
-               pkg-config,
+               gem2deb,
                libbackward-cpp-dev,
-               ruby
+               ruby,
+               pkg-config
 XS-Ruby-Versions: all
 Vcs-Browser: https://github.com/ignitionrobotics/ignition-tools
 Vcs-Git: https://github.com/ignitionrobotics/ignition-tools.git
