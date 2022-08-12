@@ -22,7 +22,7 @@ XB-Ruby-Versions: ${ruby:Versions}
 Depends: ruby | ruby-interpreter,
          ${misc:Depends}
 Multi-Arch: same
-Description: Entry point for using all the suite of ignition tools - app
+Description: Entry point for using all the suite of Gazebo tools - app
  Gazebo tools provide the ign command line tool that accepts multiple
  subcommands. Each subcommand is implemented in a plugin that belongs to a
  specific Gazebo project.
@@ -36,9 +36,25 @@ Depends: cmake,
          ignition-tools,
          ${misc:Depends}
 Multi-Arch: same
-Description: Entry point for using all the suite of ignition tools - cmake support
+Description: Entry point for using all the suite of Gazebo tools - cmake support
  Gazebo tools provide the ign command line tool that accepts multiple
  subcommands. Each subcommand is implemented in a plugin that belongs to a
  specific Gazebo project.
  .
  Package contains the cmake helpers
+
+Package: gz-tools
+Depends: ignition-tools, ${misc:Depends}
+Architecture: all
+Priority: optional
+Section: oldlibs
+Description: transitional package
+ It's recommended to use the gz packages going forward.
+
+Package: libgz-tools-dev
+Depends: libignition-tools-dev, ${misc:Depends}
+Architecture: all
+Priority: optional
+Section: oldlibs
+Description: transitional package
+ It's recommended to use the gz packages going forward.
